@@ -115,3 +115,19 @@ export async function GET() {
     return Response.json({ error }, { status: 500 });
   }
 }
+
+// This function handles the GET request to drop all four tables' data
+// export async function GET() {
+//   try {
+//     await sql.begin(async (sql) => {
+//       await sql`DROP TABLE IF EXISTS users CASCADE`;
+//       await sql`DROP TABLE IF EXISTS customers CASCADE`;
+//       await sql`DROP TABLE IF EXISTS invoices CASCADE`;
+//       await sql`DROP TABLE IF EXISTS revenue CASCADE`;
+//     });
+//
+//     return Response.json({ message: 'Tables dropped successfully' });
+//   } catch (error) {
+//     return Response.json({ error }, { status: 500 });
+//   }
+// }
